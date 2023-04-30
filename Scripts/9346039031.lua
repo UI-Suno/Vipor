@@ -1,9 +1,4 @@
 task.wait(0.25)
-local Services = {
-	["Players"] = game:GetService("Players"),
-}
-
-local LocalPlayer = Services.Players.LocalPlayer
 
 if not readfile then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
@@ -17,7 +12,14 @@ else
     end
 end
 
-local Library = readfile("Vipor\\Downloads\\Library.lua")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt", true))()
+
+task.wait(0.25)
+local Services = {
+	["Players"] = game:GetService("Players"),
+}
+
+local LocalPlayer = Services.Players.LocalPlayer
 
 local Window = Library:Window("Proj. Vipor "..tostring(readfile("Vipor\\Downloads\\Version.lua")), Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
