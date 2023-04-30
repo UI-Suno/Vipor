@@ -17,7 +17,7 @@ else
         if not isfolder("Vipor\\Downloads") then
             LocalPlayer:Kick("(E: 404) Vipor/Configurations does not appear to exist within our database!")
         else
-            writefile("Vapor\\Downloads\\Developer.lua", tostring(Developer))
+            writefile("Vapor\\Downloads\\Developer.lua", ""..tostring(Developer).."")
         end
     end
 end
