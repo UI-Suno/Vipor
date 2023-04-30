@@ -20,7 +20,9 @@ local Services = {
 }
 
 local LocalPlayer = Services.Players.LocalPlayer
+local Humanoid = LocalPlayer.Character.Humanoid
 
+local Bypassed = false
 Bypass_AC = function()
     local reg = getreg()
  
@@ -54,12 +56,14 @@ Bypass_AC = function()
  
     script1:Destroy()
     script2:Destroy()
+
+    Bypassed = true
 end
 
 local Window = Library:Window("Proj. Vipor "..tostring(readfile("Vipor\\Downloads\\Version.lua")), Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
 local Systems = Window:Tab("Systems ⚙️")
-local AntiCheat = Systems:Label("Anti Cheat Configurations")
+local AntiCheat_Config = Systems:Label("Anti Cheat Configurations")
 local DefyAC = Systems:Button("Defy Anti-Cheat", function()
     Bypass_AC()
 end)
@@ -72,4 +76,14 @@ local Auto_Bypass = Systems:Toggle("Auto Bypass", false, function(Tog)
             end
         until Tog == false
     end)()
+end)
+
+local Player = Window:Tab("Player 😎")
+local Humanoid_Config = Systems:Label("Humanoid Configurations")
+local Player:Slider("Player Speed", 0, 150, 16, function(Sli)
+    if not Bypassed then
+        Library:Notification("Bypass Required", "You must use bypass the anti-cheat button before using this module.", "Okay.")
+    else
+        Humanoid.WalkSpeed = Sli
+    end
 end)
