@@ -1,6 +1,6 @@
 task.wait(0.5)
 
-local Version = "1.0.0"
+local Version = "1.0.1"
 
 local Services = {
     ["Players"] = game:GetService("Players"),
