@@ -21,8 +21,6 @@ else
 end
 
 task.wait(0.25)
-coroutine.wrap(function()
-    if game.PlaceId == 9346039031 then
-        dofile("Vipor\\Scripts\\9346039031.lua")
-    end
-end)()
+if game.PlaceId == 9346039031 then
+    dofile("Vipor\\Scripts\\9346039031.lua")
+end
