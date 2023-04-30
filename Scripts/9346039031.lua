@@ -12,7 +12,7 @@ else
     end
 end
 
-local Library = readfile("Vipor\\Downloads\\Library.lua")
+local Library = tostring(readfile("Vipor\\Downloads\\Library.lua"))
 
 task.wait(0.25)
 local Services = {
