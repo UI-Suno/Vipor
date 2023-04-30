@@ -4,7 +4,7 @@ local Services = {
     ["Players"] = game:GetService("Players"),
 }
 
-local LocalPlayer = Services.Players;
+local LocalPlayer = Services.Players.LocalPlayer;
 
 local Identified_Executor = nil;
 
