@@ -11,12 +11,9 @@ local Identified_Executor = nil;
 if Identified_Executor == nil then
     if identifyexecutor() == "ScriptWare" or identifyexecutor() == "Script-Ware" then
         Identified_Executor = "Script-Ware"
-    else
-        LocalPlayer:Kick("Your exploit does not seem to be supported with Vipor.")
-    end
-    if syn then
+    elseif syn then
         Identified_Executor = "Synapse-X"
-    else
+    elseif not syn or not identifyexecutor() == "ScriptWare" or identifyexecutor() == "Script-Ware" then
         LocalPlayer:Kick("Your exploit does not seem to be supported with Vipor.")
     end
 else
