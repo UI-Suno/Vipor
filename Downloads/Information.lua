@@ -1,4 +1,4 @@
-task.wait(0.25)
+task.wait(0.5)
 
 local Services = {
     ["Players"] = game:GetService("Players"),
@@ -6,7 +6,7 @@ local Services = {
 
 local LocalPlayer = Services.Players.LocalPlayer;
 
-if not writefile then
+if not makefolder then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
 else
     if not isfolder("Vipor") then
