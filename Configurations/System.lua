@@ -25,3 +25,4 @@ end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Configurations/Executor.lua", true))("Executor")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Project/Downloads.lua", true))("Downloads")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Configurations/Run.lua", true))("Run")
