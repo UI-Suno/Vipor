@@ -1,6 +1,6 @@
 task.wait(0.25)
 
-local Developer = true
+local Developer = false
 
 local Services = {
     ["Players"] = game:GetService("Players"),
