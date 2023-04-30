@@ -1,4 +1,4 @@
-task.wait(0.25)
+task.wait(0.5)
 
 local Version = "1.0.0"
 
@@ -8,7 +8,7 @@ local Services = {
 
 local LocalPlayer = Services.Players.LocalPlayer;
 
-if not makefolder then
+if not writefile then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
 else
     if not isfolder("Vipor") then
@@ -17,7 +17,7 @@ else
         if not isfolder("Vipor\\Downloads") then
             LocalPlayer:Kick("(E: 404) Vipor/Configurations does not appear to exist within our database!")
         else
-            writefile("Vapor\\Downloads\\Version.lua", ""..tostring(Version).."")
+            writefile("Vapor\\Downloads\\Version.lua", tostring(Version))
         end
     end
 end
