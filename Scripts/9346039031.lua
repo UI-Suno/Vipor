@@ -1,6 +1,5 @@
 task.wait(0.25)
 
-local Library
 if not readfile then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
 else
@@ -9,12 +8,13 @@ else
     else
         if not isfolder("Vipor\\Downloads") then
             LocalPlayer:Kick("(E: 404) Vipor/Configurations does not appear to exist within our database!")
-        else
-            Library = readfile("Vapor\\Downloads\\Library.lua")
         end
     end
 end
 
+local Library = readfile("Vipor\\Downloads\\Library.lua")
+
+task.wait(0.25)
 local Services = {
 	["Players"] = game:GetService("Players"),
 }
