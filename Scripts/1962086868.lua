@@ -17,6 +17,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid
 task.wait(0.25)
 local Services = {
 	["Players"] = game:GetService("Players"),
+    ["TeleportService"] = game:GetService("TeleportService"),
 }
 
 local LocalPlayer = Services.Players.LocalPlayer
@@ -62,9 +63,9 @@ end
 
 local Window = Library:Window("Proj. Vipor "..tostring(readfile("Vipor\\Downloads\\Version.lua")), Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
-local Systems = Window:Tab("Systems ⚙️")
-local AntiCheat_Config = Systems:Label("Anti Cheat Configurations")
-local DefyAC = Systems:Button("Defy Anti-Cheat", function()
+local SystemsSettings = Window:Tab("Systems ⚙️")
+local AntiCheat_Config = SystemsSettings:Label("Anti Cheat Configurations")
+local DefyAC = SystemsSettings:Button("Defy Anti-Cheat", function()
     Bypass_AC()
 end)
 local Auto_Bypass = Systems:Toggle("Auto Bypass", false, function(Tog)
@@ -78,12 +79,18 @@ local Auto_Bypass = Systems:Toggle("Auto Bypass", false, function(Tog)
     end)()
 end)
 
-local Player = Window:Tab("Player 😎")
-local Humanoid_Config = Systems:Label("Humanoid Configurations")
-local Player:Slider("Player Speed", 0, 150, 16, function(Sli)
+local PlayerSettings = Window:Tab("Player 😎")
+local Humanoid_Config = PlayerSettings:Label("Humanoid Configurations")
+local PlayerSpeed = PlayerSettings:Slider("Player Speed", 0, 150, 16, function(Sli)
     if not Bypassed then
         Library:Notification("Bypass Required", "You must use bypass the anti-cheat button before using this module.", "Okay.")
     else
         Humanoid.WalkSpeed = Sli
     end
+end)
+
+local GameSettings = Window:Tab("Game 🌍")
+local Session_Config = GameSettings:Label("Session Configuration")
+local RejoinSession = GameSettings:Button("Rejoin Current", function()
+    Services.TeleportService:Teleport(game.PlaceId, LocalPlayer)
 end)
