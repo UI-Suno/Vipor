@@ -20,13 +20,6 @@ end
 
 writefile("Vipor\\Scripts\\9346039031.lua", "loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Suno/Vipor/main/Scripts/9346039031.lua', true))('9346039031')")
 
-if not loadfile then
-    return
-end
-
-task.wait(0.5)
-do
-    if game.PlaceId == 9346039031 then
-        loadfile("Vipor\\Scripts\\9346039031.lua")
-    end
+if game.PlaceId == 9346039031 then
+    dofile("Vipor\\Scripts\\9346039031.lua")
 end
