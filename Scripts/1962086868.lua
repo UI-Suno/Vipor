@@ -63,6 +63,9 @@ end
 
 coroutine.wrap(function()
     while task.wait() do
+        for i,v in pairs(workspace.tower.finishes:GetChildren()) do
+            v.Material = Enum.Material.Plastic
+        end
         for i, v in pairs(workspace.tower.sections.start.floor:GetChildren()) do
             if v.Name == "Part" then
                 for i,j in pairs(v:GetChildren()) do
