@@ -15,4 +15,4 @@ else
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Configurations/Executor.lua", true))("Executor")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Downloads/Information.lua", true))("Information")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Project/Downloads.lua", true))("Downloads")
