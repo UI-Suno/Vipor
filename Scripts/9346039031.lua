@@ -1,4 +1,9 @@
 task.wait(0.25)
+local Services = {
+	["Players"] = game:GetService("Players"),
+}
+
+local LocalPlayer = Services.Players.LocalPlayer
 
 if not readfile then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
@@ -12,16 +17,9 @@ else
     end
 end
 
-local Library = tostring(readfile("Vipor\\Downloads\\Library.lua"))
+local Library = readfile("Vipor\\Downloads\\Library.lua")
 
-task.wait(0.25)
-local Services = {
-	["Players"] = game:GetService("Players"),
-}
-
-local LocalPlayer = Services.Players.LocalPlayer
-
-local Window = Library:Window("My Hello Kitty Cafe (9346039031) 🐱", Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+local Window = Library:Window("Proj. Vipor "..tostring(readfile("Vipor\\Downloads\\Version.lua")), Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
 local Discovery = Window:Tab("Discovery 🔎")
 Discovery:Label("Diamonds")
