@@ -30,7 +30,7 @@ else
             LocalPlayer:Kick("(E: 404) Vipor/Configurations does not appear to exist within our database!")
         else
             if Identified_Executor ~= nil then
-                writefile("Vipor\\Configurations\\executor.lua", tostring(Identified_Executor))
+                writefile("Vipor\\Configurations\\Executor.lua", tostring(Identified_Executor))
             else
                 LocalPlayer:Kick("(E: 404) Identified_Executor does not seem to detect your executor.")
             end
