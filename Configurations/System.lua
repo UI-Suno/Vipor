@@ -7,6 +7,15 @@ local LocalPlayer = Services.Players.LocalPlayer;
 if not makefolder then
     LocalPlayer:Kick("(E: 404) Your exploit does not support `filesystem`, maybe upgrade your exploit?")
 else
+    if isfolder("Vipor\\Downloads") then
+        if isfile("Vipor\\Downloads\\Developer.lua") then
+            if readfile("Vipor\\Downloads\\Developer.lua") == true or readfile("Vipor\\Downloads\\Developer.lua") == "true" then
+                delfolder("Vipor")
+            end
+        end
+    end
+    task.wait(0.15)
+
     makefolder("Vipor")
 
     makefolder("Vipor\\Configurations")
