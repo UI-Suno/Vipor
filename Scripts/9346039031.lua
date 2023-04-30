@@ -1,4 +1,19 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/UI-Suno/Vipor/main/Downloads/Library.lua", true))("Library")
+task.wait(0.25)
+
+local Library
+if not readfile then
+    LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
+else
+    if not isfolder("Vipor") then
+        LocalPlayer:Kick("(E: 404) Vipor does not appear to exist within our database!")
+    else
+        if not isfolder("Vipor\\Downloads") then
+            LocalPlayer:Kick("(E: 404) Vipor/Configurations does not appear to exist within our database!")
+        else
+            Library = readfile("Vapor\\Downloads\\Library.lua")
+        end
+    end
+end
 
 local Services = {
 	["Players"] = game:GetService("Players"),
