@@ -4,7 +4,7 @@ local Services = {
     ["Players"] = game:GetService("Players"),
 }
 
-local LocalPlayer = Services.Players;
+local LocalPlayer = Services.Players.LocalPlayer;
 
 if not writefile then
     LocalPlayer:Kick("Your exploit does not support `filesystem`, maybe upgrade your exploit?")
