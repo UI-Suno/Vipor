@@ -68,7 +68,7 @@ local AntiCheat_Config = SystemsSettings:Label("Anti Cheat Configurations")
 local DefyAC = SystemsSettings:Button("Defy Anti-Cheat", function()
     Bypass_AC()
 end)
-local Auto_Bypass = Systems:Toggle("Auto Bypass", false, function(Tog)
+local Auto_Bypass = SystemsSettings:Toggle("Auto Bypass", false, function(Tog)
     coroutine.wrap(function()
         repeat
             task.wait()
