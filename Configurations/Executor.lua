@@ -10,11 +10,9 @@ local Identified_Executor = nil;
 
 if Identified_Executor == nil then
     if identifyexecutor() == "ScriptWare" or identifyexecutor() == "Script-Ware" then
-        Identified_Executor = "Script-Ware"
+        Identified_Executor = "ScriptWare"
     elseif syn then
-        Identified_Executor = "Synapse-X"
-    elseif not syn or not identifyexecutor() == "ScriptWare" or identifyexecutor() == "Script-Ware" then
-        LocalPlayer:Kick("Your exploit does not seem to be supported with Vipor.")
+        Identified_Executor = "SynapseX"
     end
 else
     return print("Vipor | Identified_Executor has already been Identified! | File: Configurations\\executor.lua")
